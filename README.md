@@ -27,4 +27,5 @@ Table of Contents
 20. Math and BigDecimal
 21. Advancing Concepts
 22. Next Steps
+
 Appendix - Selected Exercise Answers
