@@ -8,7 +8,10 @@ package com.javafortesters.domainobjects.environment;
  */
 
 public class TestAppEnv {
+    public static String DOMAIN = "192.123.0.3";
+    public static String PORT = "67";
+
     public static String getUrl() {
-        return "http://192.123.0.3:67";
+        return "http://" + DOMAIN + ":" + PORT;
     }
 }
