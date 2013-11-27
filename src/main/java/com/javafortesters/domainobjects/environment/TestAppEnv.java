@@ -9,6 +9,6 @@ package com.javafortesters.domainobjects.environment;
 
 public class TestAppEnv {
     public static String getUrl() {
-        return "192.123.0.3:67";
+        return "http://192.123.0.3:67";
     }
 }
