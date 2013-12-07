@@ -51,4 +51,73 @@ public class ClassExampleTest {
         assertTrue(truthy);
         assertFalse(falsey);
     }
+
+    @Test
+    public void IntegerTypes() {
+        byte aByteHas1Byte;
+        short aShortHas2Bytes;
+        int anIntHas4Bytes;
+        long aLongHas8Bytes;
+
+        System.out.println(
+                "* 'byte' range: " +
+                        Byte.MIN_VALUE + " to " +
+                        Byte.MAX_VALUE);
+
+        System.out.println(
+                "* 'short' range: " +
+                        Short.MIN_VALUE + " to " +
+                        Short.MAX_VALUE);
+
+        System.out.println(
+                "* 'int' range: " +
+                        Integer.MIN_VALUE + " to " +
+                        Integer.MAX_VALUE);
+
+        System.out.println(
+                "* 'long' range: " +
+                        Long.MIN_VALUE + " to " +
+                        Long.MAX_VALUE);
+
+        aLongHas8Bytes = 0L;
+        assertEquals(0, aLongHas8Bytes);
+
+        aByteHas1Byte = 0xA;
+        assertEquals(10, aByteHas1Byte);
+
+        aShortHas2Bytes = 11;
+        assertEquals(11, aShortHas2Bytes);
+
+        anIntHas4Bytes = 010;
+        assertEquals(8, anIntHas4Bytes);
+
+        aByteHas1Byte = 0b0010;
+        assertEquals(aByteHas1Byte, 2);
+
+        aLongHas8Bytes = 9_000_000_000L;
+        assertEquals(9000000000L, aLongHas8Bytes);
+    }
+
+    @Test
+    public void FloatingPointType() {
+        float singlePrecision32bit;
+        double doublePrecision64bit;
+
+        System.out.println(
+                "* 'float' range: " +
+                        Float.MIN_VALUE + " to " +
+                        Float.MAX_VALUE);
+
+        System.out.println(
+                "* 'double' range: " +
+                        Double.MIN_VALUE + " to " +
+                        Double.MAX_VALUE);
+
+        singlePrecision32bit = 10.0F;
+        assertEquals(10F, singlePrecision32bit, 0);
+
+        doublePrecision64bit = 20.0;
+        assertEquals(20D, doublePrecision64bit, 0);
+
+    }
 }
