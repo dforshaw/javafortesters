@@ -161,4 +161,64 @@ public class ArraysAndLoopingTest {
         assertEquals(8, outOfOrder[8]);
         assertEquals(9, outOfOrder[9]);
     }
+
+    @Test
+    public void arraysMultiDim1() {
+
+        int [][] multi = new int[4][4];
+
+        assertEquals(4, multi[0].length);
+        assertEquals(0, multi[0][1]);
+    }
+
+    @Test
+    public void arraysMultiDim2() {
+
+        int [][] multi = {  {1,2,3,4},
+                            {5,6,7,8},
+                            {9,10,11,12},
+                            {13,14,15,16}};
+
+        assertEquals(1, multi[0][0]);
+        assertEquals(7, multi[1][2]);
+        assertEquals(12, multi[2][3]);
+        assertEquals(14, multi[3][1]);
+    }
+
+    @Test
+    public void arraysMulti3D() {
+
+        int [][][] multi3D = new int[3][4][5];
+
+        assertEquals(3, multi3D.length);
+        assertEquals(4, multi3D[0].length);
+        assertEquals(4, multi3D[1].length);
+        assertEquals(4, multi3D[2].length);
+        assertEquals(5, multi3D[0][1].length);
+        assertEquals(5, multi3D[0][2].length);
+        assertEquals(5, multi3D[0][3].length);
+        assertEquals(0, multi3D[0][0][0]);
+    }
+
+    @Test
+    public void arraysRagged1() {
+
+        int [][] ragged2D =     {{1,2,3,4},
+                                 {5,6},
+                                 {7,8,9}
+                                };
+
+        assertEquals(4, ragged2D[0][3]);
+        assertEquals(6, ragged2D[1][1]);
+        assertEquals(7, ragged2D[2][0]);
+    }
+
+    @Test
+    public void arraysRagged2() {
+
+        int [][] ragged2D = new int[10][];
+
+        ragged2D[0] = new int[10];
+        ragged2D[1] = new int[3];
+    }
 }
