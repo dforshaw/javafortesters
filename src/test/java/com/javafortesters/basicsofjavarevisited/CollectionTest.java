@@ -1,11 +1,12 @@
 package com.javafortesters.basicsofjavarevisited;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import static org.junit.Assert.*;
 
 
 public class CollectionTest {
@@ -26,7 +27,7 @@ public class CollectionTest {
         workdays.add("Thursday");
         workdays.add("Friday");
 
-        Assert.assertEquals(5, workdays.size());
+        assertEquals(5, workdays.size());
     }
 
     @Test
@@ -36,8 +37,8 @@ public class CollectionTest {
 
         daysOfWeek.addAll(workdays);
 
-        Assert.assertEquals(workdays.size(), daysOfWeek.size());
-        Assert.assertTrue(daysOfWeek.containsAll(workdays));
+        assertEquals(workdays.size(), daysOfWeek.size());
+        assertTrue(daysOfWeek.containsAll(workdays));
     }
 
     @Test
@@ -49,12 +50,12 @@ public class CollectionTest {
 
         weekendDays.remove("Funday");
 
-        Assert.assertFalse(weekendDays.contains("Funday"));
+        assertFalse(weekendDays.contains("Funday"));
 
         weekendDays.add("Sunday");
 
-        Assert.assertEquals(2, weekendDays.size());
-        Assert.assertTrue("Bug Fixed, Sunday is in the collection now",
+        assertEquals(2, weekendDays.size());
+        assertTrue("Bug Fixed, Sunday is in the collection now",
                 weekendDays.contains("Sunday"));
     }
 }
