@@ -51,4 +51,18 @@ public class UserTest {
                 "PaZZwor6",
                 user.getPassword());
     }
+
+    @Test
+    public void shortPasswordThrowsAnException() {
+
+        User user;
+
+        try {
+            user = new User("admin", "shorty");
+
+        } catch (IllegalArgumentException e) {
+
+            System.out.println(e.getMessage());
+        }
+    }
 }
