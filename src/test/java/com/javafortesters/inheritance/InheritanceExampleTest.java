@@ -2,6 +2,7 @@ package com.javafortesters.inheritance;
 
 
 import com.javafortesters.domainentities.AdminUser;
+import com.javafortesters.domainentities.InvalidPassword;
 import com.javafortesters.domainentities.User;
 import org.junit.Test;
 
@@ -20,7 +21,13 @@ public class InheritanceExampleTest {
     @Test
     public void anAdminUserDefaultConstructor() {
 
-        AdminUser adminUser = new AdminUser();
+        AdminUser adminUser = null;
+
+        try {
+            adminUser = new AdminUser();
+        } catch(InvalidPassword e) {
+
+        }
 
         assertEquals("adminuser", adminUser.getUsername());
         assertEquals("password", adminUser.getPassword());
@@ -29,7 +36,13 @@ public class InheritanceExampleTest {
 
     @Test
     public void anAdminUserHasElevatedPermissions() {
-        AdminUser adminUser = new AdminUser("admin", "Passw0rd");
+        AdminUser adminUser = null;
+
+        try {
+            adminUser = new AdminUser("admin", "Passw0rd");
+        } catch(InvalidPassword e) {
+
+        }
 
         assertEquals("admin", adminUser.getUsername());
         assertEquals("Passw0rd", adminUser.getPassword());

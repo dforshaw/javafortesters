@@ -7,13 +7,26 @@ public class User {
     public User(){
 //        username = "username";
 //        password = "password";
-        this("username", "password");
+        this("username", "password", false);
     }
 
-    public User(String username, String password){
+    public User(String username, String password) throws InvalidPassword {
         this.username = username;
 //        this.password = password;
         setPassword(password);
+    }
+
+    private User(String username, String password, Boolean b) {
+
+        //only call this because we don't want to throw the exception
+        this.username = username;
+        try {
+            setPassword(password);
+
+        } catch (InvalidPassword e) {
+
+            throw new IllegalArgumentException("Default password incorrect", e);
+        }
     }
 
     public String getUsername() {
@@ -24,11 +37,11 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password) throws InvalidPassword {
 
-        if (password.length() < 7) {
-            throw new IllegalArgumentException("Password must be > 6 chars. Try again.");
-        }
+//        if (password.length() < 7) {
+//            throw new IllegalArgumentException("Password must be > 6 chars. Try again.");
+//        }
 
         this.password = password;
     }

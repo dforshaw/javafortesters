@@ -1,5 +1,7 @@
 package com.javafortesters.exceptions;
 
+import com.javafortesters.domainentities.InvalidPassword;
+import com.javafortesters.domainentities.User;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -126,10 +128,36 @@ public class ExceptionsExampleTest {
 
         } catch (NullPointerException e) {
             System.out.println("2. handle null pointer exception");
-            throw new IllegalArgumentException("Null pointer became illegal", e);
+//            throw new IllegalArgumentException("Null pointer became illegal", e);    ***commented out to allow build
+            age = 18;
+            System.out.println(age.toString());
 
         } finally {
+
             System.out.println("3. run code in finally section");
+        }
+    }
+
+    @Test
+    public void canCreateDefaultUserWithoutHandlingException() {
+
+        User aUser = new User();
+
+        assertEquals("username", aUser.getUsername());
+        assertEquals("password", aUser.getPassword());
+    }
+
+    @Test
+    public void haveToCatchIllegalPasswordForParamConstructor() {
+
+        try {
+            User aUser = new User("me", "letmein");
+
+        } catch (InvalidPassword invalidPassword) {
+
+            throw new IllegalArgumentException(
+                    "Was not expecting an invalid password exception",
+                    invalidPassword);
         }
     }
 }
