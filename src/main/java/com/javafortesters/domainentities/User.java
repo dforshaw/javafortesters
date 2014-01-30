@@ -1,10 +1,3 @@
-/**
- * Created with IntelliJ IDEA.
- * User: David Forshaw
- * Date: 11/27/13
- * Time: 12:08 AM
- */
-
 package com.javafortesters.domainentities;
 
 public class User {
@@ -38,5 +31,9 @@ public class User {
         }
 
         this.password = password;
+    }
+
+    public String getPermission() {
+        return "Normal";
     }
 }
