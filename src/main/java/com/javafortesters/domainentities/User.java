@@ -39,9 +39,9 @@ public class User {
 
     public void setPassword(String password) throws InvalidPassword {
 
-//        if (password.length() < 7) {
-//            throw new IllegalArgumentException("Password must be > 6 chars. Try again.");
-//        }
+        if (password.length() < 7) {
+            throw new InvalidPassword("Password must be > 6 chars. Try again.");
+        }
 
         this.password = password;
     }
