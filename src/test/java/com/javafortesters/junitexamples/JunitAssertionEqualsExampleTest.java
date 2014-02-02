@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class JunitAssertionExampleTest {
+public class JunitAssertionEqualsExampleTest {
 
     @Test
     public void AssertionExample() {
