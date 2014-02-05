@@ -8,7 +8,7 @@ import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class JunitExampleWithRuleTest {
+public class RuleAnnotationAndExceptionHandlingTest {
 
     @Rule
     public ExpectedException expected = ExpectedException.none();

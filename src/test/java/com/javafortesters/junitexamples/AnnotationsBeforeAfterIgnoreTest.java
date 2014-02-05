@@ -2,7 +2,7 @@ package com.javafortesters.junitexamples;
 
 import org.junit.*;
 
-public class JunitExampleWithBeforeAfterIgnoreTest {
+public class AnnotationsBeforeAfterIgnoreTest {
 
     @BeforeClass
     public static void runOncePerClassBeforeAnyTests() {
