@@ -1,10 +1,10 @@
-package com.javafortesters.junitexamples;
+package com.javafortesters.junitexamples.junitassertions;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class JunitAssertionTrueExampleTest {
+public class JunitAssertTrue {
 
     Boolean falsey = false;
     Boolean truthy = true;

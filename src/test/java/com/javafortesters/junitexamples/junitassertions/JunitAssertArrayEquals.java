@@ -1,10 +1,10 @@
-package com.javafortesters.junitexamples;
+package com.javafortesters.junitexamples.junitassertions;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class JunitAssertionArrayEqualsExampleTest {
+public class JunitAssertArrayEquals {
 
     String[] workdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
