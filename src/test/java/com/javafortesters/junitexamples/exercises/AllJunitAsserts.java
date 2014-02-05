@@ -1,10 +1,10 @@
-package com.javafortesters.junitexamples;
+package com.javafortesters.junitexamples.exercises;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class JunitExerciseAllAsserts {
+public class AllJunitAsserts {
 
     String[] workdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
     String[] testArray = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};

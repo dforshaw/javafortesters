@@ -1,4 +1,4 @@
-package com.javafortesters.junitexamples;
+package com.javafortesters.junitexamples.basics;
 
 import org.junit.*;
 
