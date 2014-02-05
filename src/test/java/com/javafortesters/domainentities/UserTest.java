@@ -19,7 +19,15 @@ public class UserTest {
 
     @Test
     public void canConstructWithUsernameAndPassword() {
-        User user = new User("admin", "pA55w0rD");
+
+        User user = null;
+
+        try {
+            user = new User("admin", "pA55w0rD");
+        } catch (InvalidPassword e) {
+
+        }
+
         assertEquals("given username expected",
                 "admin",
                 user.getUsername());
@@ -45,7 +53,11 @@ public class UserTest {
     public void canSetPasswordAfterConstructed(){
         User user = new User();
 
-        user.setPassword("PaZZwor6");
+        try {
+            user.setPassword("PaZZwor6");
+        } catch (InvalidPassword e) {
+
+        }
 
         assertEquals("setter password expected",
                 "PaZZwor6",
@@ -60,7 +72,8 @@ public class UserTest {
         try {
             user = new User("admin", "shorty");
 
-        } catch (IllegalArgumentException e) {
+//        } catch (IllegalArgumentException e) {      updated for ch 12
+        } catch (InvalidPassword e) {
 
             System.out.println(e.getMessage());
         }
