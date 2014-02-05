@@ -11,7 +11,7 @@ public class JunitAssertTrue {
 
     @Test
     public void AssertTrueTest() {
-        assertTrue("This is true", truthy);
+        assertTrue(truthy);
     }
 
     @Test
