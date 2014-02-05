@@ -10,7 +10,7 @@ public class JunitAssertTrue {
     Boolean truthy = true;
 
     @Test
-    public void AssertTrueExample() {
+    public void AssertTrueTest() {
         assertTrue("This is true", truthy);
     }
 

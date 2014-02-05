@@ -9,7 +9,7 @@ public class JunitAssertArrayEquals {
     String[] workdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
     @Test
-    public void AssertArrayEqualsExample() {
+    public void AssertArrayEqualsTest() {
         String[] testArray = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
         assertArrayEquals(testArray, workdays);
     }

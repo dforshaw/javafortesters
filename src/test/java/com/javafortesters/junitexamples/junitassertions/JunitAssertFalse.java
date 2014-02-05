@@ -10,7 +10,7 @@ public class JunitAssertFalse {
     Boolean truthy = true;
 
     @Test
-    public void AssertFalseExample() {
+    public void AssertFalseTest() {
         assertFalse(falsey);
     }
 

@@ -12,7 +12,7 @@ public class JunitAssertNotSame {
     Integer num2 = 112;
 
     @Test
-    public void AssertNotSameStringExampleTest() {
+    public void AssertNotSameStringTest() {
         assertNotSame(phrase1, phrase2);
     }
 
@@ -27,7 +27,7 @@ public class JunitAssertNotSame {
     }
 
     @Test
-    public void AssertNotSameIntegerExample() {
+    public void AssertNotSameIntegerTest() {
         assertNotSame(num1, num2);
     }
 

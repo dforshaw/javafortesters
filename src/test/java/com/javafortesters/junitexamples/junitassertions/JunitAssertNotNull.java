@@ -10,7 +10,7 @@ public class JunitAssertNotNull {
     String isNull = null;
 
     @Test
-    public void AssertNotNullExample() {
+    public void AssertNotNullTest() {
         assertNotNull(notNull);
     }
 
