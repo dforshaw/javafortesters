@@ -8,15 +8,11 @@ import static org.hamcrest.MatcherAssert.*;
 
 public class AllHamcrestAsserts {
 
-    String[] workdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
-    String[] testArray = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
     Boolean falsey = false;
     Boolean truthy = true;
     String phrase1 = "abc";
     String phrase2 = "abc";
     String phrase3 = "abcd";
-    String notNull = "a";
-    String isNull = null;
 
     @Test
     public void AssertTests_is() {
