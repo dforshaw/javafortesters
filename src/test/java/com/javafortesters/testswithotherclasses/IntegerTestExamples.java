@@ -9,7 +9,10 @@ package com.javafortesters.testswithotherclasses;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
 
 public class IntegerTestExamples {
 
@@ -35,8 +38,10 @@ public class IntegerTestExamples {
     }
     @Test
     public void integerExplorationUsingValueOf() {
-        Integer seven = 7;
-        assertEquals("convert int to string with valueOf for 7", "7", String.valueOf(seven));
+        Integer seven_int = 7;
+        String seven_string = "7";
+        assertEquals("convert int to string with valueOf for 7", "7", String.valueOf(seven_int));
+        assertThat("convert string to Integer with valueOf for 7", Integer.valueOf(seven_string), is(7));
     }
     @Test
     public void integerExplorationUsingToHexStringEleven() {
