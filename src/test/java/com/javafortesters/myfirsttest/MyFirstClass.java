@@ -10,6 +10,7 @@ package com.javafortesters.myfirsttest;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MyFirstClass {
     @Test
@@ -36,5 +37,9 @@ public class MyFirstClass {
     public void canModFifteenByFour(){
         int answer = 15 % 4;
         assertEquals("15 % 4 = 3", 3, answer );
+    }
+    @Test
+    public void oneThatFails(){
+        assertTrue(false);
     }
 }
