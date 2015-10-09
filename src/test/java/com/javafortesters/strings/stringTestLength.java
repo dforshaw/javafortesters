@@ -8,7 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * Created by david on 10/9/15.
  */
-public class stringTestExamplesLength {
+public class stringTestLength {
 
     @Test
     public void stringLengthTest1() {
