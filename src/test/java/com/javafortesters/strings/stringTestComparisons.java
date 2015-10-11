@@ -11,6 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class stringTestComparisons {
 
     String hello = "Hello";
+    String helloFella = "Hello fella";
 
     @Test
     public void stringComparisonTestCompareTo() {
@@ -132,12 +133,12 @@ public class stringTestComparisons {
         assertThat(hello.endsWith("lo"), is(true));
     }
 
-
     @Test
     public void stringComparisonTestEndsWith4() {
 
         assertThat(hello.endsWith("Lo"), is(false));
     }
+
     @Test
     public void stringComparisonTestStartsWith1() {
 
@@ -176,5 +177,69 @@ public class stringTestComparisons {
         String empty = "";
 
         assertThat(empty.length(), is(0));
+    }
+
+    @Test
+    public void stringComparisonRegionMatches1() {
+
+        assertThat(helloFella.regionMatches(true, 6, "fez", 0, 2), is(true));
+    }
+
+    @Test
+    public void stringComparisonRegionMatchesEx1() {
+
+        //Exercise
+
+        String helloFella = "Hello fella";
+
+        assertThat(helloFella.regionMatches(true, 9, "young lady", 6, 2), is(true));
+    }
+
+    @Test
+    public void stringComparisonIndexes1() {
+
+        assertThat(helloFella.indexOf("l"), is(2));
+    }
+
+    @Test
+    public void stringComparisonIndexes2() {
+
+        assertThat(helloFella.lastIndexOf("l"), is(9));
+    }
+
+    @Test
+    public void stringComparisonIndexes3() {
+
+        assertThat(helloFella.indexOf("l", 3), is(3));
+    }
+
+    @Test
+    public void stringComparisonIndexes4() {
+
+        assertThat(helloFella.indexOf("l", 4), is(8));
+    }
+
+    @Test
+    public void stringComparisonIndexes5() {
+
+        assertThat(helloFella.lastIndexOf("l", 8), is(8));
+    }
+
+    @Test
+    public void stringComparisonIndexes6() {
+
+        assertThat(helloFella.lastIndexOf("l", 7), is(3));
+    }
+
+    @Test
+    public void stringComparisonIndexes7() {
+
+        assertThat(helloFella.indexOf("z"), is(-1));
+    }
+
+    @Test
+    public void stringComparisonIndexes8() {
+
+        assertThat(helloFella.lastIndexOf("z"), is(-1));
     }
 }
