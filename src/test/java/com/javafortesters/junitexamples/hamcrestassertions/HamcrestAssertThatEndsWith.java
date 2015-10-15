@@ -2,7 +2,7 @@ package com.javafortesters.junitexamples.hamcrestassertions;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.endsWith;
+import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class HamcrestAssertThatEndsWith {

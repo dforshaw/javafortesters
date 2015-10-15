@@ -2,7 +2,7 @@ package com.javafortesters.junitexamples.exercises;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
 

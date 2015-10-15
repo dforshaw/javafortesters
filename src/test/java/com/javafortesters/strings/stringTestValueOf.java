@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 /**
  * Created by david on 10/9/15.

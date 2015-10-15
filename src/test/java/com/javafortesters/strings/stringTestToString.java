@@ -2,8 +2,8 @@ package com.javafortesters.strings;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 /**
  * Created by david on 10/9/15.

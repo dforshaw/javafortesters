@@ -2,7 +2,7 @@ package com.javafortesters.junitexamples.hamcrestassertions;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class HamcrestAssertThatContainsString {
